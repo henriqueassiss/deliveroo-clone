@@ -1,6 +1,16 @@
 {
-  "extends": "expo/tsconfig.base",
-  "compilerOptions": {
-    "strict": true
-  }
+	"extends": "expo/tsconfig.base",
+	"compilerOptions": {
+		"strict": false,
+		"outDir": "build",
+		"noImplicitAny": true,
+		"removeComments": true,
+		"isolatedModules": true,
+		"useDefineForClassFields": true,
+		"useUnknownInCatchVariables": true,
+		"allowSyntheticDefaultImports": true,
+		"forceConsistentCasingInFileNames": true,
+		"typeRoots": ["node_modules/@types", "src/@types/index.d.ts"]
+	},
+	"include": ["src"]
 }
