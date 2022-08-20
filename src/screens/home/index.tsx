@@ -1,5 +1,5 @@
 import React from 'react';
-import { ScrollView } from 'react-native';
+import { ScrollView, View } from 'react-native';
 
 import { Divider, Layout } from '../../components';
 import { Categories, Header, Search } from './components';
@@ -7,14 +7,16 @@ import { News } from './components/news';
 
 export const Home = () => {
 	return (
-		<Layout>
-			<Header />
+		<>
+			<Layout>
+				<Header />
 
-			<Divider isHeight size={0.03} />
+				<Divider isHeight size={0.03} />
 
-			<Search />
+				<Search />
 
-			<Divider isHeight size={0.03} />
+				<Divider isHeight size={0.03} />
+			</Layout>
 
 			<ScrollView showsVerticalScrollIndicator={false}>
 				<Categories />
@@ -22,7 +24,9 @@ export const Home = () => {
 				<Divider isHeight size={0.03} />
 
 				<News />
+
+				<Divider isHeight size={0.03} />
 			</ScrollView>
-		</Layout>
+		</>
 	);
 };
