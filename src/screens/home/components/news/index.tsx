@@ -1,18 +1,21 @@
 import React from 'react';
-import { Image, ImageSourcePropType, Pressable, Text } from 'react-native';
+import { ScrollView } from 'react-native';
 
-import { styles } from './Styles';
+import { Divider } from '../../../../components';
+import { Card1, Card2, Card3 } from './components';
 
-interface INews {
-	image: ImageSourcePropType;
-	title: string;
-}
-
-export const News = ({ image, title }: INews) => {
+export const News = () => {
 	return (
-		<Pressable style={styles.card}>
-			<Image style={styles.cardImage} source={image} />
-			<Text style={styles.cardTitle}>{title}</Text>
-		</Pressable>
+		<ScrollView horizontal showsHorizontalScrollIndicator={false}>
+			<Card1 />
+
+			<Divider size={0.03} />
+
+			<Card2 />
+
+			<Divider size={0.03} />
+
+			<Card3 />
+		</ScrollView>
 	);
 };
