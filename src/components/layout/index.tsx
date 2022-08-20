@@ -1,11 +1,14 @@
 import React from 'react';
-import { StatusBar } from 'react-native';
+import { Dimensions, StatusBar } from 'react-native';
 import {
 	SafeAreaView,
 	useSafeAreaInsets,
 } from 'react-native-safe-area-context';
 
+import { colors } from '../../utils';
 import { styles } from './Styles';
+
+const { width, height } = Dimensions.get('window');
 
 export const Layout = (props: any) => {
 	const insets = useSafeAreaInsets();
@@ -15,13 +18,17 @@ export const Layout = (props: any) => {
 			style={[
 				styles.container,
 				{
-					paddingTop: insets.top,
-					paddingLeft: insets.left,
-					paddingRight: insets.right,
 					paddingBottom: insets.bottom,
+					paddingTop: insets.top || height * 0.025,
+					paddingLeft: insets.left || width * 0.025,
+					paddingRight: insets.right || width * 0.025,
 				},
 			]}>
-			<StatusBar animated barStyle='light-content' />
+			<StatusBar
+				animated
+				barStyle='dark-content'
+				backgroundColor={colors.white}
+			/>
 			{props.children}
 		</SafeAreaView>
 	);
