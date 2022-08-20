@@ -20,7 +20,7 @@ export const Search = () => {
 			</View>
 
 			<Pressable style={styles.searchButton}>
-				<AdjustmentsIcon size={height * 0.035} color={colors.blue} />
+				<AdjustmentsIcon size={height * 0.035} color={colors.green} />
 			</Pressable>
 		</View>
 	);

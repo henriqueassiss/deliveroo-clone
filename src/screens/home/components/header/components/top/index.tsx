@@ -33,12 +33,15 @@ export const Top = ({ isDelivery }: ITop) => {
 						Localização Atual
 					</Text>
 
-					<ChevronDownIcon size={height * 0.03} color={colors.blue} />
+					<ChevronDownIcon
+						size={height * 0.03}
+						color={colors.green}
+					/>
 				</View>
 			</View>
 
 			<Pressable style={styles.button}>
-				<UserIcon size={height * 0.04} color={colors.blue} />
+				<UserIcon size={height * 0.04} color={colors.green} />
 			</Pressable>
 		</View>
 	);
