@@ -3,6 +3,7 @@ import {
 	Dimensions,
 	Image,
 	ImageSourcePropType,
+	Pressable,
 	Text,
 	View,
 } from 'react-native';
@@ -23,7 +24,11 @@ export interface ICard {
 }
 export const Card = (props: { data: ICard }) => {
 	return (
-		<View style={styles.container}>
+		<Pressable
+			style={({ pressed }) => [
+				styles.container,
+				pressed && styles.containerActive,
+			]}>
 			<Image style={styles.image} source={props.data.image} />
 
 			<View style={styles.bottom}>
@@ -66,6 +71,6 @@ export const Card = (props: { data: ICard }) => {
 					<Text style={styles.grayText}>{props.data.promo}</Text>
 				</View>
 			</View>
-		</View>
+		</Pressable>
 	);
 };

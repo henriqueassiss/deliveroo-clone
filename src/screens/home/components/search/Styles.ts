@@ -7,12 +7,12 @@ const { height, width } = Dimensions.get('window');
 const searchSize = height * 0.065;
 
 export const styles = StyleSheet.create({
-	search: {
+	container: {
 		height: searchSize,
 		flexDirection: 'row',
 	},
 
-	searchInput: {
+	input: {
 		height: searchSize,
 		width: width * 0.84,
 		alignItems: 'center',
@@ -22,12 +22,16 @@ export const styles = StyleSheet.create({
 		paddingHorizontal: width * 0.025,
 	},
 
-	searchInputField: { marginLeft: width * 0.02, flex: 1 },
+	inputField: { marginLeft: width * 0.02, flex: 1 },
 
-	searchButton: {
+	button: {
 		height: searchSize,
 		marginLeft: 'auto',
 		alignItems: 'center',
 		justifyContent: 'center',
+	},
+
+	buttonActive: {
+		opacity: 0.7,
 	},
 });

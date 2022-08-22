@@ -1,5 +1,5 @@
 import React from 'react';
-import { Dimensions, Image, Text, View } from 'react-native';
+import { Dimensions, Image, Pressable, Text, View } from 'react-native';
 import { ArrowCircleRightIcon } from 'react-native-heroicons/outline';
 
 import Background from '../../../../../../assets/images/cards/2.jpg';
@@ -10,7 +10,11 @@ const { height } = Dimensions.get('window');
 
 export const Card3 = () => {
 	return (
-		<View style={styles.container}>
+		<Pressable
+			style={({ pressed }) => [
+				styles.container,
+				pressed && styles.containerActive,
+			]}>
 			<Image style={styles.image} source={Background} />
 
 			<View style={styles.content}>
@@ -22,6 +26,6 @@ export const Card3 = () => {
 					color={colors.white}
 				/>
 			</View>
-		</View>
+		</Pressable>
 	);
 };

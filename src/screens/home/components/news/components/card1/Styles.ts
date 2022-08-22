@@ -8,6 +8,8 @@ const { height, width } = Dimensions.get('window');
 export const styles = StyleSheet.create({
 	container: { aspectRatio: 16 / 9, width: width - width * 0.05 },
 
+	containerActive: { opacity: 0.8 },
+
 	image: {
 		width: '100%',
 		height: '100%',

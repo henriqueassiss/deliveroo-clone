@@ -9,17 +9,21 @@ const { height } = Dimensions.get('window');
 
 export const Search = () => {
 	return (
-		<View style={styles.search}>
-			<View style={styles.searchInput}>
+		<View style={styles.container}>
+			<View style={styles.input}>
 				<SearchIcon size={height * 0.03} color={colors.gray} />
 
 				<TextInput
-					style={styles.searchInputField}
+					style={styles.inputField}
 					placeholder='Comidas, bebidas, serviços'
 				/>
 			</View>
 
-			<Pressable style={styles.searchButton}>
+			<Pressable
+				style={({ pressed }) => [
+					styles.button,
+					pressed && styles.buttonActive,
+				]}>
 				<AdjustmentsIcon size={height * 0.035} color={colors.green} />
 			</Pressable>
 		</View>

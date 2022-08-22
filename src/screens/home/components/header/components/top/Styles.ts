@@ -53,4 +53,8 @@ export const styles = StyleSheet.create({
 		justifyContent: 'center',
 		backgroundColor: colors.lightGreen,
 	},
+
+	buttonActive: {
+		opacity: 0.7,
+	},
 });

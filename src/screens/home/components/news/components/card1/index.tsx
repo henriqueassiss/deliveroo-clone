@@ -1,5 +1,5 @@
 import React from 'react';
-import { Dimensions, Image, Text, View } from 'react-native';
+import { Dimensions, Image, Pressable, Text, View } from 'react-native';
 import { ArrowNarrowRightIcon } from 'react-native-heroicons/outline';
 
 import PrimeLogo from '../../../../../../assets/images/brand/PrimeWhiteLogo.png';
@@ -13,7 +13,11 @@ const { height } = Dimensions.get('window');
 
 export const Card1 = () => {
 	return (
-		<View style={styles.container}>
+		<Pressable
+			style={({ pressed }) => [
+				styles.container,
+				pressed && styles.containerActive,
+			]}>
 			<Image style={styles.image} source={Background} />
 
 			<View style={styles.content}>
@@ -54,6 +58,6 @@ export const Card1 = () => {
 					termos estão inclusos.
 				</Text>
 			</View>
-		</View>
+		</Pressable>
 	);
 };

@@ -10,9 +10,13 @@ interface ICard {
 
 export const Card = ({ image, title }: ICard) => {
 	return (
-		<Pressable style={styles.card}>
-			<Image style={styles.cardImage} source={image} />
-			<Text style={styles.cardTitle}>{title}</Text>
+		<Pressable
+			style={({ pressed }) => [
+				styles.container,
+				pressed && styles.containerActive,
+			]}>
+			<Image style={styles.image} source={image} />
+			<Text style={styles.title}>{title}</Text>
 		</Pressable>
 	);
 };

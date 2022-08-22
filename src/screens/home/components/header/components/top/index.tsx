@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Dimensions, Image, Pressable, Text, View } from 'react-native';
 import { ChevronDownIcon, UserIcon } from 'react-native-heroicons/outline';
 
@@ -40,7 +40,11 @@ export const Top = ({ isDelivery }: ITop) => {
 				</View>
 			</View>
 
-			<Pressable style={styles.button}>
+			<Pressable
+				style={({ pressed }) => [
+					styles.button,
+					pressed && styles.buttonActive,
+				]}>
 				<UserIcon size={height * 0.04} color={colors.green} />
 			</Pressable>
 		</View>

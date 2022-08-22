@@ -14,6 +14,8 @@ export const styles = StyleSheet.create({
 		backgroundColor: colors.green,
 	},
 
+	containerActive: { opacity: 0.8 },
+
 	title: {
 		fontWeight: '700',
 		color: colors.white,

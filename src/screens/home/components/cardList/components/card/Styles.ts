@@ -10,6 +10,8 @@ export const styles = StyleSheet.create({
 		width: width - width * 0.05,
 	},
 
+	containerActive: { opacity: 0.8 },
+
 	image: {
 		flex: 1,
 		width: '100%',
