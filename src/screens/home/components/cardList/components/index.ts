@@ -1,1 +1,1 @@
-export { type ICard, Card } from './card';
+export { type ICard, Card } from '../../../../../components/card';

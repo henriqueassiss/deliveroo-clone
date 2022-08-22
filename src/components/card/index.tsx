@@ -9,7 +9,7 @@ import {
 } from 'react-native';
 import { LocationMarkerIcon, StarIcon } from 'react-native-heroicons/solid';
 
-import { colors } from '../../../../../../utils';
+import { colors } from '../../utils';
 import { styles } from './Styles';
 
 const { height } = Dimensions.get('window');
