@@ -50,7 +50,7 @@ export const Home = () => {
 				)}
 				ListFooterComponent={() => (
 					<>
-						<Divider isHeight size={0.03} />
+						<Divider isHeight size={0.3} />
 					</>
 				)}
 				renderItem={({ item }) => (
@@ -69,7 +69,7 @@ export const Home = () => {
 
 			<BottomSheet
 				isVisible={isBottomSheetVisible}
-				setIsVisible={setIsBottomSheetVisible}
+				setIsVisible={() => setIsBottomSheetVisible(0)}
 			/>
 		</>
 	);

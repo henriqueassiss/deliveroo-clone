@@ -2,7 +2,7 @@ import {
 	BottomSheetView,
 	default as DefaultBottomSheet,
 } from '@gorhom/bottom-sheet';
-import React, { Dispatch, SetStateAction } from 'react';
+import React from 'react';
 import { Dimensions, Text } from 'react-native';
 import { ClockIcon, LocationMarkerIcon } from 'react-native-heroicons/outline';
 
@@ -12,7 +12,7 @@ import { styles } from './Styles';
 
 interface IBottomSheet {
 	isVisible: number;
-	setIsVisible: Dispatch<SetStateAction<number>>;
+	setIsVisible: () => void;
 }
 const { height } = Dimensions.get('window');
 
@@ -25,7 +25,7 @@ export const BottomSheet = ({ isVisible, setIsVisible }: IBottomSheet) => {
 			enablePanDownToClose
 			style={styles.container}
 			snapPoints={snapPoints}
-			onClose={() => setIsVisible(0)}>
+			onClose={setIsVisible}>
 			<BottomSheetView>
 				<Text style={styles.title}>Sua localização</Text>
 
