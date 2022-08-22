@@ -24,6 +24,6 @@ export const styles = StyleSheet.create({
 	cardTitle: {
 		fontWeight: '700',
 		color: colors.black,
-		fontSize: RFValue(18),
+		fontSize: RFValue(16),
 	},
 });

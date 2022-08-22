@@ -9,6 +9,6 @@ export const styles = StyleSheet.create({
 	title: {
 		fontWeight: '700',
 		color: colors.black,
-		fontSize: RFValue(23),
+		fontSize: RFValue(22),
 	},
 });

@@ -29,7 +29,7 @@ export const styles = StyleSheet.create({
 		borderBottomRightRadius: height * 0.015,
 	},
 
-	title: { fontSize: RFValue(22), fontWeight: '700' },
+	title: { fontSize: RFValue(20), fontWeight: '700' },
 
 	row: {
 		flexDirection: 'row',
@@ -40,13 +40,13 @@ export const styles = StyleSheet.create({
 	greenText: {
 		fontWeight: '400',
 		color: colors.green,
-		fontSize: RFValue(16),
+		fontSize: RFValue(15),
 	},
 
 	grayText: {
 		fontWeight: '400',
 		color: colors.gray,
-		fontSize: RFValue(16),
+		fontSize: RFValue(15),
 	},
 
 	icon: {

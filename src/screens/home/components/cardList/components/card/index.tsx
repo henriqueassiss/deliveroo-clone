@@ -30,7 +30,11 @@ export const Card = (props: { data: ICard }) => {
 				<Text style={styles.title}>{props.data.title}</Text>
 
 				<View style={styles.row}>
-					<StarIcon size={height * 0.04} color={colors.green} />
+					<StarIcon
+						style={styles.icon}
+						size={height * 0.0325}
+						color={colors.green}
+					/>
 
 					<Text style={styles.greenText}>
 						{props.data.rate.toPrecision(2)}
@@ -51,7 +55,7 @@ export const Card = (props: { data: ICard }) => {
 				<View style={styles.row}>
 					<LocationMarkerIcon
 						style={styles.icon}
-						size={height * 0.035}
+						size={height * 0.0325}
 						color={colors.gray}
 					/>
 
