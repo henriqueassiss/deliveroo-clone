@@ -1,22 +1,30 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { FlatList, Text, View } from 'react-native';
 
 import { Divider, Layout } from '../../components';
 import { features } from '../../data/Features';
-import { CardList, Categories, Header, News, Search } from './components';
+import {
+	BottomSheet,
+	CardList,
+	Categories,
+	Header,
+	News,
+	Search,
+} from './components';
 import { ICard } from './components/cardList/components';
 import { styles } from './Styles';
-
 export interface IFeatures {
 	title: string;
 	cards: ICard[];
 }
 
 export const Home = () => {
+	const [isBottomSheetVisible, setIsBottomSheetVisible] = useState(0);
+
 	return (
 		<>
 			<Layout>
-				<Header />
+				<Header onPress={() => setIsBottomSheetVisible(1)} />
 
 				<Divider isHeight size={0.03} />
 
@@ -57,6 +65,11 @@ export const Home = () => {
 						<CardList cards={item.cards} />
 					</>
 				)}
+			/>
+
+			<BottomSheet
+				isVisible={isBottomSheetVisible}
+				setIsVisible={setIsBottomSheetVisible}
 			/>
 		</>
 	);

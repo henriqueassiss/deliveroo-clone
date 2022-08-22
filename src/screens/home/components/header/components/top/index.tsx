@@ -9,11 +9,12 @@ import { styles } from './Styles';
 
 interface ITop {
 	isDelivery: boolean;
+	onPress: () => void;
 }
 
 const { height } = Dimensions.get('window');
 
-export const Top = ({ isDelivery }: ITop) => {
+export const Top = ({ isDelivery, onPress }: ITop) => {
 	return (
 		<View style={styles.container}>
 			<View style={styles.image}>
@@ -23,7 +24,12 @@ export const Top = ({ isDelivery }: ITop) => {
 				/>
 			</View>
 
-			<View style={styles.text}>
+			<Pressable
+				style={({ pressed }) => [
+					styles.text,
+					pressed && styles.buttonActive,
+				]}
+				onPress={onPress}>
 				<Text style={styles.textTime}>
 					{isDelivery ? 'Entrega' : 'Retirada'} - Agora
 				</Text>
@@ -38,7 +44,7 @@ export const Top = ({ isDelivery }: ITop) => {
 						color={colors.green}
 					/>
 				</View>
-			</View>
+			</Pressable>
 
 			<Pressable
 				style={({ pressed }) => [
