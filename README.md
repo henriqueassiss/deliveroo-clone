@@ -14,6 +14,8 @@ The beginners may be kind of confused, so here it is, a real example with some g
 
 ## Screens
 
+### Home
+
 ![1](public/1.jpeg)
 
 ![2](public/2.jpeg)
