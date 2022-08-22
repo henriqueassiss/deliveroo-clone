@@ -2,14 +2,14 @@ import React from 'react';
 import { FlatList } from 'react-native';
 
 import { Divider } from '../../../../components';
-import { images } from '../../../../utils';
+import { categoriesImages } from '../../../../data';
 import { Card } from './components';
 
 export const Categories = () => {
 	return (
 		<FlatList
 			horizontal
-			data={images}
+			data={categoriesImages}
 			alwaysBounceHorizontal
 			keyExtractor={(_, i) => i.toString()}
 			showsHorizontalScrollIndicator={false}
@@ -26,7 +26,7 @@ export const Categories = () => {
 							/>
 						</>
 					);
-				} else if (images.length === item.index + 1) {
+				} else if (categoriesImages.length === item.index + 1) {
 					return (
 						<>
 							<Card

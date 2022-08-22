@@ -1,0 +1,1 @@
+export { categoriesImages } from './CategoriesImages';
