@@ -10,7 +10,15 @@ The beginners may be kind of confused, so here it is, a real example with some g
 
 [Here is my design inspiration](https://screenlane.com/screen/deliveroo-ios-app-653/).
 
-## Demo Video
+## Demo Videos
+
+### IOS
+
+https://user-images.githubusercontent.com/61031382/186028260-d1cdfe3b-d73c-4620-ac3d-ab51a047414e.mp4
+
+### Android
+
+https://user-images.githubusercontent.com/61031382/186028303-4be3bb9f-35d7-4cc1-8bb3-48607afe9e3f.mp4
 
 ## Screens
 
