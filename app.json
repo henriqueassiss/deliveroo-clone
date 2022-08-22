@@ -4,12 +4,12 @@
 		"slug": "deliveroo",
 		"version": "1.0.0",
 		"orientation": "portrait",
-		"icon": "assets/icon.png",
+		"icon": "src/assets/images/app/icon.png",
 		"userInterfaceStyle": "light",
 		"splash": {
-			"image": "assets/splash.png",
+			"image": "src/assets/images/app/splash.png",
 			"resizeMode": "contain",
-			"backgroundColor": "#ffffff"
+			"backgroundColor": "#55c9bd"
 		},
 		"updates": {
 			"fallbackToCacheTimeout": 0
@@ -20,12 +20,12 @@
 		},
 		"android": {
 			"adaptiveIcon": {
-				"foregroundImage": "assets/adaptive-icon.png",
-				"backgroundColor": "#FFFFFF"
+				"foregroundImage": "src/assets/images/app/adaptive-icon.png",
+				"backgroundColor": "#55c9bd"
 			}
 		},
 		"web": {
-			"favicon": "assets/favicon.png"
+			"favicon": "src/assets/images/app/favicon.png"
 		}
 	}
 }
